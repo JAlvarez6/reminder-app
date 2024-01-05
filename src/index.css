@@ -5,9 +5,268 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #d3e2b6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav {
+  display: flex;
+  padding: 0;
+  background-color: #68b3af;
+}
+
+nav section {
+  width: 100%;
+  text-align: center;
+}
+
+nav section h1 {
+  color: white;
+}
+
+nav section a {
+  text-decoration: none;
+}
+
+nav section h1:hover {
+  color: whitesmoke;
+}
+
+section h1 {
+  font-size: 3rem;
+}
+
+h1 {
+  margin: 2.5rem;
+}
+
+section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.reminders-Container {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  padding: 1rem 0;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  cursor: text;
+}
+
+.form-group label {
+  font-size: 1.05rem;
+}
+
+form button {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #68b3af;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #87bdb1;
+}
+
+button:disabled {
+  background-color: lightgrey;
+  opacity: 1;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  background-color: lightgrey;
+}
+
+.form-group input:focus {
+  border: 2px solid red;
+}
+
+.date-time-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-time {
+  width: 40%;
+}
+
+.reminder {
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border: 0px solid rgba(0, 0, 0, 0.612);
+  border-radius: 1rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  height: 175px;
+}
+
+.reminder-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+
+.reminder-details h2 {
+  margin: 0;
+}
+
+.reminder-details p {
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.dateText {
+  color: dimgray;
+}
+
+.overDue {
+  color: red;
+}
+
+.reminder-button {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+
+.link {
+  align-self: flex-end;
+  text-decoration: none;
+  background-color: #68b3af;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.link:hover {
+  background-color: #87bdb1;
+}
+
+.fa-trash-o {
+  color: black;
+  font-size: 2rem;
+}
+
+.fa-trash-o:hover {
+  color: red;
+}
+
+.remove {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.remove:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  padding: 1rem;
+  font: inherit;
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 1.75rem;
+  height: 1.75rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  border-radius: 50%;
+  box-shadow: inset 1rem 1rem green;
+  background-color: green;
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+input[type='checkbox']:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+.reminderFiltersContainer {
+  display: flex;
+}
+
+.reminderFiltersButton {
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #68b3af;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.reminderFiltersButton:hover {
+  background-color: #87bdb1;
+}
+
+.editButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notFoundButton {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 10px;
+  background-color: #68b3af;
+  color: white;
+  cursor: pointer;
+}
+
+.notFoundButton:hover {
+  background-color: #87bdb1;
+}
+
+.notFoundText {
+  text-align: center;
 }

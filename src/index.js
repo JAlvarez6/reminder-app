@@ -1,13 +1,18 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { store } from './app/store'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import './index.css'
+import { fetchReminders } from './features/reminders/remindersSlice'
+import { remindersData } from './data/remindersData'
 
-const container = document.getElementById('root');
-const root = createRoot(container);
+const container = document.getElementById('root')
+const root = createRoot(container)
+
+// Initializes reminders state
+store.dispatch(fetchReminders(remindersData))
 
 root.render(
   <React.StrictMode>
@@ -15,9 +20,9 @@ root.render(
       <App />
     </Provider>
   </React.StrictMode>
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()

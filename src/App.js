@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar } from './app/Navbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { SingleReminderPage } from './features/reminders/SingleReminderPage'
 import { EditReminderForm } from './features/reminders/EditReminderForm'
 import { Homepage } from './app/Homepage'
@@ -17,6 +17,7 @@ function App() {
             path="/editReminder/:reminderId"
             element={<EditReminderForm />}
           />
+          <Route path="*" element={<Navigate to={'/'} replace={true} />} />
         </Routes>
       </div>
     </BrowserRouter>
